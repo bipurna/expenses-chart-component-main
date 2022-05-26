@@ -24,8 +24,9 @@ html {
   margin: auto;
 }
 body {
-  display: table-cell;
-  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-family: "DM Sans", sans-serif;
   font-size: 18px;
   background-color: var(--Cream);
@@ -68,8 +69,52 @@ main .heading__left {
 }
 .chart__header{
     text-align: center;
+    padding-bottom: 48px;
 }
 .chart__days-chart{
     flex: 1;
     flex-grow: 1;
+}
+.separator{
+  min-width: 100%;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(126, 126, 126, 0.3);
+  margin: 30px 0;
+}
+.state{
+  display: flex;
+  justify-content: space-between;
+}
+.state span{
+  font-weight: 700;
+  font-size: 30px;
+}
+.comparision-last-month p{
+  font-weight: 900;
+  font-size: 12px;
+  text-align: end;
+}
+@media (max-width:375px) {
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  main .heading {
+    display: flex;
+    width: 340px;
+    height: 120px;
+    
+  }
+  .chart{
+    background-color: var(--Very-pale-orange);
+    width: 340px;
+    height: 420px;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+  
 }
